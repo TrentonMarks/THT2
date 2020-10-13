@@ -627,11 +627,7 @@ ul.menu.mm-listview {
 #content, .title {
   width: calc(66.66667% - 33.33333px);
   float: left;
-  margin-left: 20px;
-}
-
-#sidebar-second {
-  background: transparent;
+  margin: 0 0 0 20px;
 }
 
 /*============== Images ==============*/
@@ -761,6 +757,9 @@ ul.menu.mm-listview {
 @media screen and (min-width: 768px) {
   .responsive-menu-block-wrapper {
     display: block;
+  }
+  #superfish-top-top-nav-accordion {
+    display: none;
   }
 }
 
