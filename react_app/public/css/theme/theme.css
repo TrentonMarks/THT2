@@ -713,6 +713,10 @@ ul.menu.mm-listview {
   padding: 1% 4%;
 }
 
+#edit-questions-comments--3 {
+  height: 138px;
+}
+
 /*============== News ==============*/
 .page-news .views-row {
   background: rgba(41, 41, 41, 0.2);
