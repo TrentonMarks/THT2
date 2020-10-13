@@ -67,6 +67,7 @@ a:hover {
 #top-top-nav .container div {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
 
 #top-top-nav #block-toptopnav {
