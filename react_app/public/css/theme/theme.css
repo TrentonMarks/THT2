@@ -603,6 +603,34 @@ ul.menu.mm-listview {
   color: #34373c;
 }
 
+.fas, .far {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 70%;
+  width: 70%;
+}
+
+.fa-phone {
+  background-image: url(../../files/images/phone.png);
+}
+
+.fa-comments {
+  background-image: url(../../files/images/phone.png);
+}
+
+.fa-chart-bar {
+  background-image: url(../../files/images/phone.png);
+}
+
+.fa-certificate {
+  background-image: url(../../files/images/phone.png);
+}
+
+.fa-smile {
+  background-image: url(../../files/images/phone.png);
+}
+
 /*============== Content ==============*/
 #main {
   padding: 2% 0;
