@@ -67,6 +67,40 @@ a:hover {
   max-width: 100%;
 }
 
+/*=============== Side Menu ===============*/
+.side-menu {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: linear-gradient(#f45925, #a68a43);
+  margin-left: -250px;
+  transition: .5s;
+}
+
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 45px 0 0 45px;
+}
+
+.side-menu a {
+  text-decoration: none;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+  color: white;
+  display: block;
+}
+
+.open {
+  margin-left: 0;
+}
+
+.main-page {
+  transition: .5s;
+}
+
 /*============== Top Top Nav ==============*/
 #top-top-nav {
   background: #608995;

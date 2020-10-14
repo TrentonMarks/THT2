@@ -12,6 +12,7 @@ export default class HorizontalMenuItem extends React.Component {
   handleHover(){
     this.setState({ isHovered: !this.state.isHovered });
   }
+  
   render() {
     let data = this.props;
     let hoverClass = this.state.isHovered ? "menu sub-nav sf-show" : "menu sub-nav sf-hidden";

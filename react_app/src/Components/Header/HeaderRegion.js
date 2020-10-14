@@ -8,13 +8,14 @@ export default class HeaderRegion extends React.Component {
 
   render() {
     let mainMenu = this.props.mainMenu;
+    let toggleSideMenu = this.props.toggleSideMenu;
 
     return (
       <header id="header">
         <div className="container">
           <div id="header-region">
             <div>
-              <ResponsiveMenuIconBlock />
+              <ResponsiveMenuIconBlock toggleSideMenu={toggleSideMenu} />
               <HeaderLogoBlock />
               <HeaderPhoneBlock />
             </div>

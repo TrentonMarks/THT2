@@ -1,6 +1,7 @@
 // Import React, Stylesheets, Components, Config
 import React, { Component } from 'react'; // React
 import './App.css'; // Stylesheet
+import SideMenu from './Components/SideMenu/SideMenu'; // Component
 import TopTopNavRegion from './Components/TopTopNav/TopTopNavRegion'; // Component
 import HeaderRegion from './Components/Header/HeaderRegion'; // Component
 import HeroRegion from './Components/Hero/HeroRegion'; // Component
@@ -32,6 +33,7 @@ class App extends Component{
     super();
     // Set State
     this.state = {
+      sideMenuOpen: false,
       isHomePage: null,
       isContactUsPage: false,
       topTopNav: null,
@@ -68,6 +70,7 @@ class App extends Component{
     this.updateFooter = this.updateFooter.bind(this);
     this.updateCopyright = this.updateCopyright.bind(this);
     // Misc Methods
+    // this.toggleSideMenu = this.toggleSideMenu.bind(this);
     this.checkIfHomePage = this.checkIfHomePage.bind(this);
     this.checkIfContactUsPage = this.checkIfContactUsPage.bind(this);
   }
@@ -85,6 +88,9 @@ class App extends Component{
     this.loadCallouts();
     this.checkIfHomePage();
     this.checkIfContactUsPage();
+  }
+  toggleSideMenu = () => {
+    this.setState({ sideMenuOpen: !this.state.sideMenuOpen });
   }
   loadTopTopNav(){
     // Fetch Top Top Nav.
@@ -200,53 +206,58 @@ class App extends Component{
       this.setState({ isContactUsPage: true });
     }
   }
+
   render(){
 
     return (
-      <div>
-      <div id="mm-0" className="mm-page mm-slideout">
-        <div className="responsive-menu-page-wrapper">
-          <div className="layout-container">
-            <TopTopNavRegion
-              topTopNav={this.state.topTopNav}
-              headerPhone={this.state.headerPhone}
-            />
-            <HeaderRegion
-              mainMenu={this.state.mainMenu}
-            />
-            {/* If Home Page. */
-              this.state.isHomePage
-              ?
-              /* Render Hero and Callouts */
-              <div>
-                <HeroRegion
-                  hero={this.state.hero}
-                />
+      <>
+        <SideMenu
+          sideMenuOpen={this.state.sideMenuOpen}
+        />
+        <div id="mm-0" className="mm-page mm-slideout main-page">
+          <div className="responsive-menu-page-wrapper">
+            <div className="layout-container">
+              <TopTopNavRegion
+                topTopNav={this.state.topTopNav}
+                headerPhone={this.state.headerPhone}
+              />
+              <HeaderRegion
+                mainMenu={this.state.mainMenu}
+                toggleSideMenu={this.toggleSideMenu}
+              />
+              {/* If Home Page. */
+                this.state.isHomePage
+                ?
+                /* Render Hero and Callouts */
+                <div>
+                  <HeroRegion
+                    hero={this.state.hero}
+                  />
+                  <MainSection
+                    callouts={this.state.callouts}
+                    page={this.state.page}
+                    sidebar={this.state.sidebar}
+                    webform={this.state.webform}
+                    isHomePage={this.state.isHomePage}
+                    isContactUsPage={this.state.isContactUsPage}
+                  />
+                </div>
+                :
                 <MainSection
-                  callouts={this.state.callouts}
                   page={this.state.page}
                   sidebar={this.state.sidebar}
                   webform={this.state.webform}
-                  isHomePage={this.state.isHomePage}
                   isContactUsPage={this.state.isContactUsPage}
                 />
-              </div>
-              :
-              <MainSection
-                page={this.state.page}
-                sidebar={this.state.sidebar}
-                webform={this.state.webform}
-                isContactUsPage={this.state.isContactUsPage}
+              }
+              <FooterRegion
+                footer={this.state.footer}
+                copyright={this.state.copyright}
               />
-            }
-            <FooterRegion
-              footer={this.state.footer}
-              copyright={this.state.copyright}
-            />
+            </div>
           </div>
         </div>
-      </div>
-      </div>
+      </>
     );
   }
 }
