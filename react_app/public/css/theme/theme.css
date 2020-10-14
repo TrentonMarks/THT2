@@ -687,7 +687,7 @@ ul.menu.mm-listview {
 /*============== Right Column CTA ==============*/
 #block-rightcolumncta,
 #block-rightcolumncta--3 {
-  background: rgba(52, 55, 60, 0.2);
+  background: rgb(201,201,202);
   padding-bottom: 3%;
   border-radius: 5px;
   border-top: #608995 solid 10px;
@@ -715,6 +715,10 @@ ul.menu.mm-listview {
 
 #edit-questions-comments--3 {
   height: 138px;
+}
+
+#sidebar-second {
+  background-color: transparent;
 }
 
 /*============== News ==============*/
