@@ -1,6 +1,7 @@
 import React from 'react'; // import React
 import ResponsiveMenuIconBlock from "./ResponsiveMenuIcon/ResponsiveMenuIconBlock"; // import component
 import HeaderLogoBlock from "./HeaderLogo/HeaderLogoBlock"; // import component
+import HeaderPhoneBlock from "./HeaderPhone/HeaderPhoneBlock"; // import component
 import HorizontalMenuBlock from "./HorizontalMenu/HorizontalMenuBlock"; // import component
 
 export default class HeaderRegion extends React.Component {
@@ -15,6 +16,7 @@ export default class HeaderRegion extends React.Component {
             <div>
               <ResponsiveMenuIconBlock />
               <HeaderLogoBlock />
+              <HeaderPhoneBlock />
             </div>
           </div>
           <nav id="service-menu" className="menu">
