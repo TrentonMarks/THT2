@@ -687,7 +687,7 @@ ul.menu.mm-listview {
 /*============== Right Column CTA ==============*/
 #block-rightcolumncta,
 #block-rightcolumncta--3 {
-  background: rgb(201,201,202);
+  background: rgb(201, 201, 202);
   padding-bottom: 3%;
   border-radius: 5px;
   border-top: #608995 solid 10px;

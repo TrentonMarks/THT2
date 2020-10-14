@@ -42,8 +42,7 @@ export default class ContactUsPageBlock extends React.Component {
                       </div>
                     </div>
                     <div className="js-form-item form-item js-form-type-textfield form-item-what-is-5-and-5-added-together- js-form-item-what-is-5-and-5-added-together-">
-                      <label htmlFor="edit-what-is-5-and-5-added-together-" className="js-form-required form-required">What is 5 and 5 added together?*</label>
-                      <input pattern="^10" data-webform-pattern-error="Incorrect" data-drupal-selector="edit-what-is-5-and-5-added-together-" type="text" id="edit-what-is-5-and-5-added-together-" name="what_is_5_and_5_added_together_" size="60" maxLength="255" className="form-text required" required="required" aria-required="true"></input>
+                      <input pattern="^10" data-webform-pattern-error="Incorrect" data-drupal-selector="edit-what-is-5-and-5-added-together-" type="text" id="edit-what-is-5-and-5-added-together-" name="what_is_5_and_5_added_together_" size="60" maxLength="255" placeholder="What is 5 and 5 added together?*" className="form-text required" required="required" aria-required="true"></input>
                     </div>
                     <div data-drupal-selector="edit-actions" className="form-actions webform-actions js-form-wrapper form-wrapper" id="edit-actions">
                       <input className="webform-button--submit button button--primary js-form-submit form-submit" data-drupal-selector="edit-actions-submit" type="submit" id="edit-actions-submit" name="op" value="Send message"></input>
