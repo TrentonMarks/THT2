@@ -208,13 +208,15 @@ class App extends Component{
   }
 
   render(){
+    let className;
+    this.state.sideMenuOpen ? className = 'mm-page mm-slideout main-page slide' : className = 'mm-page mm-slideout main-page';
 
     return (
       <>
         <SideMenu
           sideMenuOpen={this.state.sideMenuOpen}
         />
-        <div id="mm-0" className="mm-page mm-slideout main-page">
+        <div id="mm-0" className={className}>
           <div className="responsive-menu-page-wrapper">
             <div className="layout-container">
               <TopTopNavRegion

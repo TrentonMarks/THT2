@@ -101,6 +101,10 @@ a:hover {
   transition: .5s;
 }
 
+.slide {
+  margin-left: 250px;
+}
+
 /*============== Top Top Nav ==============*/
 #top-top-nav {
   background: #608995;
