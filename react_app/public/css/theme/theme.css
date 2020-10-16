@@ -70,27 +70,44 @@ a:hover {
 /*=============== Side Menu ===============*/
 .side-menu {
   height: 100%;
-  width: 250px;
+  width: 440px;
   position: fixed;
   top: 0;
   left: 0;
-  background: linear-gradient(#f45925, #a68a43);
-  margin-left: -250px;
+  background: rgb(51,51,51);
+  margin-left: -440px;
   transition: .5s;
+}
+
+.side-menu .side-menu-title {
+  width: 100%;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgb(36,36,36);
+}
+
+.side-menu .side-menu-title span {
+  color: rgb(133,133,133);
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
 }
 
 .side-menu ul {
   list-style: none;
   padding: 0;
-  margin: 45px 0 0 45px;
 }
 
 .side-menu a {
   text-decoration: none;
-  margin-bottom: 30px;
-  font-size: 1.8rem;
-  color: white;
+  font-size: 16px;
+  color: rgb(225,225,225);
   display: block;
+  -webkit-font-smoothing: antialiased;
+  padding: 9.5px 10px 9.5px 0px;
+  margin-left: 20px;
+  border-bottom: 1px solid rgb(36,36,36);
 }
 
 .open {
@@ -99,10 +116,16 @@ a:hover {
 
 .main-page {
   transition: .5s;
+  width: 100vw;
+  overflow: hidden;
 }
 
 .slide {
-  margin-left: 250px;
+  margin-left: 440px;
+}
+
+.shade {
+  background-color: rgb(0, 0, 0 ,.4);
 }
 
 /*============== Top Top Nav ==============*/
@@ -428,6 +451,7 @@ ul.sf-menu li.sfHover > ul {
 }
 
 .responsive-menu-toggle-icon {
+  background: transparent;
   box-sizing: border-box;
   display: block;
   width: 55px;
@@ -437,11 +461,21 @@ ul.sf-menu li.sfHover > ul {
   position: relative;
 }
 
+.responsive-menu-toggle-icon:hover {
+  background: transparent;
+}
+
+.responsive-menu-toggle-icon:focus {
+  outline: none;
+  background: transparent;
+}
+
 .no-js .responsive-menu-toggle-icon {
   display: none;
 }
 
 .responsive-menu-toggle-icon span.label {
+  font-weight: 500;
   display: block;
   position: absolute;
   font-size: 15px;
@@ -451,6 +485,8 @@ ul.sf-menu li.sfHover > ul {
   color: #fff;
   text-align: center;
   width: 100%;
+  margin-bottom: 4px;
+  letter-spacing: .3px;
 }
 
 .responsive-menu-toggle-icon:before,
@@ -916,6 +952,12 @@ ul.menu.mm-listview {
     flex-direction: column;
   }
   #content {
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  #sidebar-second {
     width: auto;
   }
 }
