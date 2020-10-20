@@ -403,6 +403,7 @@ a:hover {
   font-weight: normal;
   margin-bottom: 1px;
   border-bottom: 1px solid #abc6be;
+  border-left: solid 4px #abc6be;
 }
 
 #header #service-menu li ul > li:last-of-type a {

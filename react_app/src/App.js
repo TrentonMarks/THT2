@@ -217,6 +217,7 @@ class App extends Component{
     return (
       <>
         <SideMenu
+          mainMenu={this.state.mainMenu}
           sideMenuOpen={this.state.sideMenuOpen}
           closeSideMenu={this.closeSideMenu}
         />

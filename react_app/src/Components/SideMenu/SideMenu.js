@@ -1,4 +1,5 @@
 import React from 'react'; // import React
+import SideMenuItem from "./SideMenuItem"; // import component
 
 export default class SideMenu extends React.Component {
   componentDidMount(){
@@ -23,6 +24,8 @@ export default class SideMenu extends React.Component {
     const sideMenuOpen = this.props.sideMenuOpen;
     let className;
     sideMenuOpen ? className = "side-menu open" : className = "side-menu";
+    let data = this.props.mainMenu;
+    console.log(data);
 
     return (
       <div className={className} ref={node => this.node = node}>
@@ -30,11 +33,15 @@ export default class SideMenu extends React.Component {
           <span>Menu</span>
         </div>
         <ul>
-          <li><a href="/service-1">Service 1</a></li>
-          <li><a href="/service-2">Service 2</a></li>
-          <li><a href="/service-3">Service 3</a></li>
-          <li><a href="/service-4">Service 4</a></li>
-          <li><a href="/service-5">Service 5</a></li>
+          {
+            data !== null &&
+            data !== undefined &&
+            data.length > 0
+            ?
+            data.map(item => <SideMenuItem {...item} key={item.link.weight}/>)
+            :
+            null
+          }
         </ul>
       </div>
     );
