@@ -212,6 +212,7 @@ class App extends Component{
   render(){
     let className;
     this.state.sideMenuOpen ? className = 'mm-page mm-slideout main-page slide mm-wrapper_opening' : className = 'mm-page mm-slideout main-page';
+    this.state.sideMenuOpen ? document.body.classList.add('fixed') : document.body.classList.remove('fixed');
 
     return (
       <>
@@ -219,6 +220,9 @@ class App extends Component{
           sideMenuOpen={this.state.sideMenuOpen}
           closeSideMenu={this.closeSideMenu}
         />
+        {
+          this.state.sideMenuOpen ? <div className="shaded"></div> : null
+        }
         <div id="mm-0" className={className}>
           <div className="responsive-menu-page-wrapper">
             <div className="layout-container">
