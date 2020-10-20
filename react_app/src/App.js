@@ -70,7 +70,6 @@ class App extends Component{
     this.updateFooter = this.updateFooter.bind(this);
     this.updateCopyright = this.updateCopyright.bind(this);
     // Misc Methods
-    // this.toggleSideMenu = this.toggleSideMenu.bind(this);
     this.checkIfHomePage = this.checkIfHomePage.bind(this);
     this.checkIfContactUsPage = this.checkIfContactUsPage.bind(this);
   }
@@ -89,8 +88,11 @@ class App extends Component{
     this.checkIfHomePage();
     this.checkIfContactUsPage();
   }
-  toggleSideMenu = () => {
+  openSideMenu = () => {
     this.setState({ sideMenuOpen: !this.state.sideMenuOpen });
+  }
+  closeSideMenu = () => {
+    this.setState({ sideMenuOpen: false });
   }
   loadTopTopNav(){
     // Fetch Top Top Nav.
@@ -215,6 +217,7 @@ class App extends Component{
       <>
         <SideMenu
           sideMenuOpen={this.state.sideMenuOpen}
+          closeSideMenu={this.closeSideMenu}
         />
         <div id="mm-0" className={className}>
           <div className="responsive-menu-page-wrapper">
@@ -225,7 +228,7 @@ class App extends Component{
               />
               <HeaderRegion
                 mainMenu={this.state.mainMenu}
-                toggleSideMenu={this.toggleSideMenu}
+                openSideMenu={this.openSideMenu}
               />
               {/* If Home Page. */
                 this.state.isHomePage
