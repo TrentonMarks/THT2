@@ -211,7 +211,7 @@ class App extends Component{
 
   render(){
     let className;
-    this.state.sideMenuOpen ? className = 'mm-page mm-slideout main-page slide' : className = 'mm-page mm-slideout main-page';
+    this.state.sideMenuOpen ? className = 'mm-page mm-slideout main-page slide mm-wrapper_opening' : className = 'mm-page mm-slideout main-page';
 
     return (
       <>
