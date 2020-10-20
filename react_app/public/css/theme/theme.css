@@ -149,6 +149,14 @@ a:hover {
   overflow: hidden;
 }
 
+.show {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
 /*============== Top Top Nav ==============*/
 #top-top-nav {
   background: #608995;

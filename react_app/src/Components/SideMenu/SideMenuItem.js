@@ -2,16 +2,27 @@ import React from 'react'; // import React
 import SideSubmenuItem from "./SideSubmenuItem"; // import component
 
 export default class SideMenuItem extends React.Component {
+  constructor(){
+    super();
+    this.state = {
+      isHovered: false
+    };
+    this.handleHover = this.handleHover.bind(this);
+  }
+  handleHover(){
+    this.setState({ isHovered: !this.state.isHovered });
+  }
 
   render() {
     let data = this.props;
+    let hoverClass = this.state.isHovered ? "show" : "hidden";
 
     return (
-      <li>
+      <li onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}>
         <a href={data.link.url} data-drupal-link-system-path={"node/"+data.link.route_parameters.node}>
           {data.link.title}
         </a>
-        <ul>
+        <ul className={hoverClass}>
           {
             data.subtree !== null &&
             data.subtree !== undefined &&

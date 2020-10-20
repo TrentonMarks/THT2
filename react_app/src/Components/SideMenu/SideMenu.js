@@ -25,7 +25,6 @@ export default class SideMenu extends React.Component {
     let className;
     sideMenuOpen ? className = "side-menu open" : className = "side-menu";
     let data = this.props.mainMenu;
-    console.log(data);
 
     return (
       <div className={className} ref={node => this.node = node}>

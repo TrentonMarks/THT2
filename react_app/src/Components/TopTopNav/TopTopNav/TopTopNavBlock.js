@@ -38,7 +38,7 @@ export default class TopTopNavBlock extends React.Component {
             <a href="/areas-served" className="sf-depth-1">Areas Served</a>
           </li>
           <li id="top-top-nav-menu-link-contentb1c31870-d49a-40ff-abc2-3acfe7d99053-accordion" className="sf-depth-1 sf-no-children">
-            <a href="/equipment" className="sf-depth-1">Equipment</a>
+            <a href="/news" className="sf-depth-1">News</a>
           </li>
           <li id="top-top-nav-menu-link-contentf3be7255-7a7a-42d9-98b5-e6bbd9c84a41-accordion" className="sf-depth-1 sf-no-children">
             <a href="/about-us" className="sf-depth-1">About Us</a>
