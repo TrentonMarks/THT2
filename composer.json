@@ -43,7 +43,7 @@
             "libraries/{$name}": [
                 "type:drupal-library"
             ],
-            "modules/contrib/{$name}": [
+            "modules/{$name}": [
                 "type:drupal-module"
             ],
             "profiles/contrib/{$name}": [
